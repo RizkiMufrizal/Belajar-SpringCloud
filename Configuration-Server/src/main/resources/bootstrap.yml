@@ -9,4 +9,4 @@ spring:
           uri: https://github.com/RizkiMufrizal/Belajar-SpringCloud.git
           search-paths: 'config, config/{application}'
           clone-on-start: true
-          basedir: 'target/config'
+          basedir: 'build/config'
