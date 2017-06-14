@@ -13,7 +13,6 @@ import org.springframework.http.ResponseEntity
 import org.springframework.web.bind.annotation.*
 import javax.validation.Valid
 
-
 /**
  * Created by rizkimufrizal on 6/14/17.
  */
@@ -53,7 +52,7 @@ class BookCatalogController @Autowired constructor(val bookCatalogRepository: Bo
     @GetMapping(value = "/books/{id}")
     fun getBook(@PathVariable("id") id: Long): BookCatalog {
         this.validateSelf(id)
-        return bookCatalogRepository.findByIdBookCatalog(id).orElseThrow({ NotFoundRestHelper(id, "Data Catalog Tidak Tersedia") })
+        return bookCatalogRepository.findById(id).orElseThrow({ NotFoundRestHelper(id, "Data Catalog Tidak Tersedia") })
     }
 
     @PutMapping(value = "/books/{id}")
@@ -82,6 +81,6 @@ class BookCatalogController @Autowired constructor(val bookCatalogRepository: Bo
     }
 
     override fun validateSelf(id: Long) {
-        bookCatalogRepository.findByIdBookCatalog(id).orElseThrow({ NotFoundRestHelper(id, "Data Catalog Tidak Tersedia") })
+        bookCatalogRepository.findById(id).orElseThrow({ NotFoundRestHelper(id, "Data Catalog Tidak Tersedia") })
     }
 }

@@ -8,5 +8,5 @@ import java.util.Optional
  * Created by rizkimufrizal on 6/14/17.
  */
 interface BookCatalogRepository : PagingAndSortingRepository<BookCatalog, Long> {
-    fun findByIdBookCatalog(id: Long): Optional<BookCatalog>
+    fun findById(id: Long): Optional<BookCatalog>
 }
