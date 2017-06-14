@@ -44,6 +44,7 @@ dependencies {
     compile("org.jetbrains.kotlin:kotlin-stdlib-jre8:${kotlinVersion}")
     compile("org.jetbrains.kotlin:kotlin-reflect:${kotlinVersion}")
     compile("com.relops:snowflake:1.1")
+    compile('com.zaxxer:HikariCP')
     runtime('org.mariadb.jdbc:mariadb-java-client')
     testCompile('org.springframework.boot:spring-boot-starter-test')
 }
