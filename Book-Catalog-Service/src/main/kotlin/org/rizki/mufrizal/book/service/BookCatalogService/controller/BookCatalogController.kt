@@ -52,7 +52,7 @@ class BookCatalogController @Autowired constructor(val bookCatalogRepository: Bo
     @GetMapping(value = "/books/{id}")
     fun getBook(@PathVariable("id") id: Long): BookCatalog {
         this.validateSelf(id)
-        return bookCatalogRepository.findById(id).orElseThrow({ NotFoundRestHelper(id, "Data Catalog Tidak Tersedia") })
+        return bookCatalogRepository.findOne(id) ?: throw NotFoundRestHelper(id, "Data Catalog Tidak Tersedia")
     }
 
     @PutMapping(value = "/books/{id}")
@@ -81,6 +81,6 @@ class BookCatalogController @Autowired constructor(val bookCatalogRepository: Bo
     }
 
     override fun validateSelf(id: Long) {
-        bookCatalogRepository.findById(id).orElseThrow({ NotFoundRestHelper(id, "Data Catalog Tidak Tersedia") })
+        bookCatalogRepository.findOne(id) ?: throw NotFoundRestHelper(id, "Data Catalog Tidak Tersedia")
     }
 }

@@ -7,4 +7,4 @@ import org.springframework.web.bind.annotation.ResponseStatus
  * Created by rizkimufrizal on 6/14/17.
  */
 @ResponseStatus(HttpStatus.NOT_FOUND)
-class NotFoundRestHelper(id: Any, message: String) : RuntimeException("$message $id")
+class NotFoundRestHelper(id: Any, message: String) : RuntimeException("$message : $id")
