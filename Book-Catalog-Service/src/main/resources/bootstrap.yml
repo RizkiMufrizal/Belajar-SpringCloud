@@ -1,6 +1,6 @@
 spring:
   application:
-    name: book-catalog
+    name: bookcatalog
   cloud:
     config:
       fail-fast: true
