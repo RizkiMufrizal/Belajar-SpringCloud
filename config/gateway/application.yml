@@ -3,4 +3,4 @@ server:
 zuul:
     ignoredServices: '*'
     routes:
-        book-catalog: /books/**
+        book-catalog: /api/books/**
