@@ -7,6 +7,13 @@ spring:
       discovery:
         enabled: true
         service-id: configuration-server
+    vault:
+      token: af4e4a5d-0186-8a84-6f5b-53acf0934152
+      host: localhost
+      port: 8200
+      scheme: http
+      connection-timeout: 5000
+      read-timeout: 15000
 eureka:
   client:
     service-url:
