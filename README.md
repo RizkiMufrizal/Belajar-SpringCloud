@@ -35,7 +35,7 @@ token_renewable	false
 token_policies 	[root]
 ```
 
-token yang digunakan adalah `af4e4a5d-0186-8a84-6f5b-53acf0934152`
+token yang digunakan adalah `af4e4a5d-0186-8a84-6f5b-53acf0934152`, nantinya token ini digunakan di selurug service yang akan mengakses secret property.
 
 ## Export Json ke Vault
 
